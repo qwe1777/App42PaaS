@@ -6,7 +6,7 @@ services:
               context: ./
               dockerfile: Dockerfile
         volumes:
-            - 'home/project1:/home/project'
+            - 'home/project:/home/project'
     deploy:
         image: ibtech/tomcat9
         ports:
