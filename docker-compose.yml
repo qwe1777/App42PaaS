@@ -16,7 +16,7 @@ services:
         depends_on:
               - app42
     mysql:
-        image: mysql
+        image:  mysql/mysql-server
         ports:
               - '3306:3306'
         environment:
