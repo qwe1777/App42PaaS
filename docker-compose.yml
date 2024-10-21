@@ -16,7 +16,7 @@ services:
         depends_on:
               - app42
     mysql:
-        image: ubuntu/mysql
+        image: alpine/mysql
         ports:
               - '3306:3306'
         environment:
