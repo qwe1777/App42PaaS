@@ -11,4 +11,4 @@ WORKDIR /home/App42PaaS-Java-MySQL-Sample
 RUN mvn package
 WORKDIR /home
 RUN mkdir project
-RUN cp home/App42PaaS-Java-MySQL-Sample/target/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war /home/project
+RUN cp home/App42PaaS-Java-MySQL-Sample/target/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war /project
