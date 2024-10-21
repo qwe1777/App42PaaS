@@ -10,4 +10,4 @@ COPY Config.properties /home/App42PaaS-Java-MySQL-Sample/WebContent/Config.prope
 WORKDIR /home/App42PaaS-Java-MySQL-Sample
 RUN mvn package
 RUN mkdir /home/project
-RUN cp /home/App42PaaS-Java-MySQL-Sample/target/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war /home/project
+COPY /home/App42PaaS-Java-MySQL-Sample/target/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war /home/project
