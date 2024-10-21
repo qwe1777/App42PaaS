@@ -1,17 +1,17 @@
 ---
 services:
-    maven:
+    App42:
           build:
               context: ./
-              dockerfile: Dockerfile2
+              dockerfile: Dockerfile
           volumes:
-              - './home:/home'
-    tomcat:
+              - './home/project:/home/project'
+    deploy:
         image: dockertn3/tomcat-alpine-msfonts:latest
         ports:
               - '8080:8080'
         volumes:
-              - './boxfuse-sample-java-war-hello/target:/usr/local/tomcat/webapps'
+              - './home/project:/usr/local/tomcat/webapps'
         depends_on:
               - maven
     mysql:
