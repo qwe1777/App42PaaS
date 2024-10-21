@@ -14,7 +14,7 @@ services:
         volumes:
               - './home/project:/usr/local/tomcat/webapps'
         depends_on:
-              - maven
+              - app42
     mysql:
         image: mysql:latest
         ports:
@@ -24,6 +24,6 @@ services:
             MYSQL_USER: app42
             MYSQL_PASSWORD: qwerty123
         depends_on:
-              - tomcat
+              - deploy
               
 ...
