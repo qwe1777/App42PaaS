@@ -8,11 +8,11 @@ services:
           volumes:
               - './home/project:/home/project'
     deploy:
-        image: dockertn3/tomcat-alpine-msfonts:latest
+        image: ibtech/tomcat9
         ports:
               - '8080:8080'
         volumes:
-              - './home/project:/usr/local/tomcat/webapps'
+              - './home/project:/var/lib/tomcat9/webapps'
         depends_on:
               - app42
     mysql:
