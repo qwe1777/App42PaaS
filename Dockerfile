@@ -9,4 +9,6 @@ RUN git clone "https://github.com/shephertz/App42PaaS-Java-MySQL-Sample.git"
 COPY Config.properties /home/App42PaaS-Java-MySQL-Sample/WebContent/Config.properties
 WORKDIR /home/App42PaaS-Java-MySQL-Sample
 RUN mvn package
-RUN cp /target/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war /home
+WORKDIR /home
+RUN mkdir /home/project
+RUN cp /target/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war /home/project
