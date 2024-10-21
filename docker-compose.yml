@@ -1,0 +1,28 @@
+---
+services:
+    maven:
+          build:
+              context: ./
+              dockerfile: Dockerfile2
+          volumes:
+              - './home:/home'
+    tomcat:
+        image: dockertn3/tomcat-alpine-msfonts:latest
+        ports:
+              - '8080:8080'
+        volumes:
+              - './boxfuse-sample-java-war-hello/target:/usr/local/tomcat/webapps'
+        depends_on:
+              - maven
+    mysql:
+        image: mysql:latest
+        ports:
+              - '3306:3306'
+        environment:
+      MYSQL_DATABASE: appdb
+      MYSQL_USER: app42
+      MYSQL_PASSWORD: qwerty123  
+        depends_on:
+              - tomcat
+              
+...
