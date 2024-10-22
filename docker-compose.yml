@@ -6,13 +6,13 @@ services:
               context: ./
               dockerfile: Dockerfile
         volumes:
-             - '/home/project:/home/project'
+             - 'shared:/home/project'
     deploy:
         image: ibtech/tomcat9
         ports:
               - '8080:8080'
         volumes:
-              - '/home/project:/var/lib/tomcat9/webapps'
+              - 'shared:/var/lib/tomcat9/webapps'
         depends_on:
               - app42
     mysql:
@@ -25,5 +25,6 @@ services:
             MYSQL_PASSWORD: qwerty123
         depends_on:
               - deploy
-              
+volumes:
+    shared : '/home/project'
 ...
