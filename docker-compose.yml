@@ -8,7 +8,7 @@ services:
         volumes:
               - volume1:/home/App42PaaS-Java-MySQL-Sample/target
     deploy:
-        image: 99taxis/tomcat7
+        image: rapidfort/tomcat9-openjdk11-ib
         ports:
               - '8080:8080'
         volumes:
