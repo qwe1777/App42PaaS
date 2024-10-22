@@ -13,8 +13,7 @@ services:
               - '8080:8080'
         volumes:
               - 'volume1:/var/lib/tomcat9/webapps'
-        depends_on:
-              - app42
+
     mysql:
         image:  mysql/mysql-server
         ports:
@@ -23,8 +22,7 @@ services:
             MYSQL_DATABASE: appdb
             MYSQL_USER: app42
             MYSQL_PASSWORD: qwerty123
-        depends_on:
-              - deploy
+
 volumes:
     volume1:/home/project
 ...
