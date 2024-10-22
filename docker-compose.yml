@@ -24,4 +24,4 @@ services:
             MYSQL_PASSWORD: qwerty123
 
 volumes:
-  volume1:/home/target
+  volume1:
