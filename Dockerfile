@@ -13,3 +13,4 @@ RUN mkdir /home/project
 RUN cp /home/App42PaaS-Java-MySQL-Sample/target/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war /home/project
 
 
+
