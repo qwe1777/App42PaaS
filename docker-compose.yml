@@ -6,7 +6,7 @@ services:
               context: ./
               dockerfile: Dockerfile
         volumes:
-          - 'home/project:/home/project'
+          - 'home/project:/home/App42PaaS-Java-MySQL-Sample/target/'
     deploy:
         image: ibtech/tomcat9
         ports:
