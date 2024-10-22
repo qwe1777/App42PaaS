@@ -6,13 +6,13 @@ services:
               context: ./
               dockerfile: Dockerfile
         volumes:
-            - '/home/project/:/home/App42PaaS-Java-MySQL-Sample/target/'
+            - '/home/project:/home/App42PaaS-Java-MySQL-Sample/target/'
     deploy:
         image: ibtech/tomcat9
         ports:
               - '8080:8080'
         volumes:
-            - '/home/project/:/var/lib/tomcat9/webapps/'
+            - '/home/project:/var/lib/tomcat9/webapps/'
         depends_on:
               - app42
     mysql:
