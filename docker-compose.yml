@@ -26,5 +26,5 @@ services:
         depends_on:
               - deploy
 volumes:
-              volume1:/home/project
+    volume1:/home/project
 ...
