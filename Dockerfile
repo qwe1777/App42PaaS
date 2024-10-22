@@ -5,7 +5,7 @@ RUN apt install git -y
 RUN apt install default-jdk -y
 RUN apt install maven -y
 WORKDIR /home
-RUN git clone "https://github.com/shephertz/App42PaaS-Java-MySQL-Sample.git"
+RUN git clone "https://github.com/qwe1777/Paas42.git"
 WORKDIR /home/App42PaaS-Java-MySQL-Sample
 RUN mvn package
 WORKDIR /
