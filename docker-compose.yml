@@ -8,7 +8,7 @@ services:
         volumes:
               - volume1:/home/App42PaaS-Java-MySQL-Sample/target
     deploy:
-        image: eclipse-temurin:11-jdk-noble
+        image: amazoncorretto:8-al2-jdk
         ports:
               - '8080:8080'
         volumes:
