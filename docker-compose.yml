@@ -26,5 +26,5 @@ services:
         depends_on:
               - deploy
 volumes:
-    shared : '/home/project'
+    shared : /home/project
 ...
