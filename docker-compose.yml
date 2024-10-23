@@ -6,7 +6,7 @@ services:
               context: ./
               dockerfile: Dockerfile
         volumes:
-              - home/project:/home/App42PaaS-Java-MySQL-Sample/target
+              - volume1:/home/App42PaaS-Java-MySQL-Sample/target
     deploy:
         build:
               context: ./
@@ -14,7 +14,7 @@ services:
         ports:
               - '8080:8080'
         volumes:
-              - home/project:/var/lib/tomcat9/
+              - volume1:/var/lib/tomcat9/
 
     mysql:
         image:  mysql/mysql-server
@@ -26,4 +26,4 @@ services:
             MYSQL_PASSWORD: qwerty123
 
 volumes:
-  volume1:
+  volume1:home/project
