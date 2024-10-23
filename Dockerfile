@@ -6,7 +6,7 @@ RUN apt install default-jdk -y
 RUN apt install maven -y
 WORKDIR /home
 RUN git clone "https://github.com/qwe1777/Paas42.git"
-WORKDIR /home/App42PaaS-Java-MySQL-Sample
+WORKDIR /Paas42
 RUN mvn package
 
 

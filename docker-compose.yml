@@ -8,7 +8,9 @@ services:
         volumes:
               - volume1:/home/App42PaaS-Java-MySQL-Sample/target
     deploy:
-        image: rapidfort/tomcat9-openjdk11-ib
+        build:
+              context: ./
+              dockerfile: Dockerfile2
         ports:
               - '8080:8080'
         volumes:
