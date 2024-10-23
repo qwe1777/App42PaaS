@@ -6,7 +6,7 @@ RUN apt install default-jdk -y
 RUN apt install maven -y
 WORKDIR /home
 RUN git clone "https://github.com/qwe1777/Paas42.git"
-WORKDIR /Paas42
+WORKDIR /home/Paas42
 RUN mvn package
 
 
