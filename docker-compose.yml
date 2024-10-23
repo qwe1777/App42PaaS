@@ -9,8 +9,7 @@ services:
               - volume1:/home/App42PaaS-Java-MySQL-Sample/target
     deploy:
         build:
-              context: ./
-              dockerfile: Dockerfile2
+              image: ibtech/tomcat9:latest
         ports:
               - '8080:8080'
         volumes:
